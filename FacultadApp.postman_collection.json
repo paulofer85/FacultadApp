@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "efcb4993-8213-4845-949a-10719ff7c990",
+		"name": "FacultadApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alumnos",
+			"item": [
+				{
+					"name": "GetAllAlumnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/alumnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"alumnos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAlumno",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   \r\n{\r\n    \"padron\": \"85857\",\r\n    \"apellido\": \"Turing\",\r\n    \"nombre\": \"Alan\",\r\n    \"domicilio\": \"Av. Siempre viva 314\",\r\n    \"CarreraId\": \"1\",\r\n    \"carrera\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/alumnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"alumnos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAlumno",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   \r\n{\r\n\t\"alumnoId\": \"1\",\r\n    \"padron\": \"85847\",\r\n    \"apellido\": \"Turing\",\r\n    \"nombre\": \"Alan\",\r\n    \"domicilio\": \"Av. Siempre viva 314\",\r\n    \"CarreraId\": \"1\",\r\n    \"carrera\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/alumnos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"alumnos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAlumno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/alumnos/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"alumnos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Carreras",
+			"item": [
+				{
+					"name": "GetAllCarreras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/carreras",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"carreras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCarrera",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   \r\n{\r\n    \"nombre\": \"Lic. en sistemas\",\r\n    \"titulo\": \"Licenciado\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/carreras",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"carreras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCarrera",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   \r\n{\r\n\t\"carreraId\": 2,\r\n    \"nombre\": \"Lic. en sistemas\",\r\n    \"titulo\": \"Lic.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/carreras/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"carreras",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCarrera",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/carreras/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"carreras",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Materias",
+			"item": [
+				{
+					"name": "GetAllMaterias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/materias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMateria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"65.20\",\r\n    \"nombre\": \"Organizacion de datos\",\r\n    \"cargaHoraria\": \"12\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/materias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMaterias",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"materiaId\": 6,\r\n    \"codigo\": \"65.20\",\r\n    \"nombre\": \"Organizacion de datos\",\r\n    \"cargaHoraria\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/materias/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCarrera",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/materias/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inscripciones",
+			"item": [
+				{
+					"name": "GetAllInscripciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/inscripciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"inscripciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateInscripcion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nota\": 9,\r\n        \"estado\": 1,\r\n        \"alumnoId\": 1,\r\n        \"materiaId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/inscripciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"inscripciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIncripciones",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inscripcionId\": 2,\r\n    \"nota\": 7,\r\n    \"estado\":2,\r\n    \"materiaId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/inscripciones/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"inscripciones",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteInscripcion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/inscripciones/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"inscripciones",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MateriasCarreras",
+			"item": [
+				{
+					"name": "GetAllMateriasCarreras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/materiascarreras",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materiascarreras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMateriaCarrera",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"carreraId\": 1,\r\n        \"materiaId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/materiascarreras",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materiascarreras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMateriaCarrera",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"materiasCarrerasId\": 2,\r\n        \"carreraId\": 1,\r\n        \"materiaId\": 3\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:50778/api/materiascarreras/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materiascarreras",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMateriaCarrera",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:50778/api/materiascarreras/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50778",
+							"path": [
+								"api",
+								"materiascarreras",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
