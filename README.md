@@ -6,7 +6,7 @@
 <h3 align="center">Facultad APP</h3>
 
 <div align="center">
-
+ 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -73,12 +73,106 @@ C:\FacultadApp\FacultadApp\FacultadAppWeb\ClientApp>npm start
 
 # API REST <a name = "api_rest"></a>
 
-Los verbos disponibles son:
-  - http://localhost:49791/api/alumnos : devuelve todos los TODO
-  - http://localhost:49791/api/inscripciones (POST): crea un nuevo TODO
-  - http://localhost:49791/api/materias
-  - http://localhost:49791/api/carreras
-  - http://localhost:49791/api/materiascarreras
+## Verbos GET disponibles
+#### Alumnos
+  - http://localhost:49791/api/alumnos: devuelve todos los alumnos
+  - http://localhost:49791/api/alumnos/#id: devuelve el alumno de id #id
+#### Inscripciones
+  - http://localhost:49791/api/inscripciones: devuelve todas las inscripciones
+  - http://localhost:49791/api/inscripciones/#id: devuelve la inscripcion de id #id
+#### Materias
+  - http://localhost:49791/api/materias: devuelve todas las materias
+  - http://localhost:49791/api/materias/#id: devuelve la materia de id #id
+#### Carreras
+  - http://localhost:49791/api/carreras: devuelve todas las carrera
+  - http://localhost:49791/api/carreras/#id: devuelve la carrera de id #id 
+#### MateriasCarreras
+  - http://localhost:49791/api/carreras: devuelve todas las MateriasCarrera
+  - http://localhost:49791/api/carreras/#id: devuelve la MateriasCarrera de id #id    
+
+## Verbos PUT disponibles
+#### Alumnos
+  - http://localhost:49791/api/alumnos/#id: edita el alumno de id #id
+#### Inscripciones
+  - http://localhost:49791/api/inscripciones/#id: edita la inscripcion de id #id
+#### Materias
+  - http://localhost:49791/api/materias/#id: edita la materia de id #id
+#### Carreras
+  - http://localhost:49791/api/carreras/#id: edita la carrera de id #id 
+#### MateriasCarreras
+  - http://localhost:49791/api/carreras/#id: edita la MateriasCarrera de id #id    
+
+  Ej. Request de edición de un Alumno via PUT
+  ```
+  Endpoint: http://localhost:49791/api/alumnos/1
+  {
+	"alumnoId": "1",
+    "padron": "85847",
+    "apellido": "Turing",
+    "nombre": "Alan",
+    "domicilio": "Av. Siempre viva 314",
+    "CarreraId": "1",
+}
+```
+
+## Verbos PUT disponibles
+#### Alumnos
+  - http://localhost:49791/api/alumnos/#id: edita el alumno de id #id
+#### Inscripciones
+  - http://localhost:49791/api/inscripciones/#id: edita la inscripcion de id #id
+#### Materias
+  - http://localhost:49791/api/materias/#id: edita la materia de id #id
+#### Carreras
+  - http://localhost:49791/api/carreras/#id: edita la carrera de id #id 
+#### MateriasCarreras
+  - http://localhost:49791/api/carreras/#id: edita la MateriasCarrera de id #id    
+
+  Ej. Request de edición de un Alumno via PUT
+  ```
+  {
+	"alumnoId": "1",
+    "padron": "85847",
+    "apellido": "Turing",
+    "nombre": "Alan",
+    "domicilio": "Av. Siempre viva 314",
+    "CarreraId": "1",
+}
+```
+
+## Verbos POST disponibles
+#### Alumnos
+  - http://localhost:49791/api/alumnos: inserta un alumno 
+#### Inscripciones
+  - http://localhost:49791/api/inscripciones: inserta inscripcion 
+#### Materias
+  - http://localhost:49791/api/materias: inserta materia 
+#### Carreras
+  - http://localhost:49791/api/carreras: inserta la carrera 
+#### MateriasCarreras
+  - http://localhost:49791/api/materiascarreras: inserta la MateriasCarrera de id #id    
+
+  Ej. Request de edición de un Alumno via PUT
+  ```
+  {
+      "padron": "85857",
+      "apellido": "Turing",
+      "nombre": "Alan",
+      "domicilio": "Av. Siempre viva 314",
+      "CarreraId": "1"
+  }
+```
+
+## Verbos DELETE disponibles
+#### Alumnos
+  - http://localhost:49791/api/alumnos/#id: elimina el alumno de id #id
+#### Inscripciones
+  - http://localhost:49791/api/inscripciones/#id: elimina la inscripcion de id #id
+#### Materias
+  - http://localhost:49791/api/materias/#id: elimina la materia de id #id
+#### Carreras
+  - http://localhost:49791/api/carreras/#id: elimina la carrera de id #id 
+#### MateriasCarreras
+  - http://localhost:49791/api/carreras/#id: elimina la MateriasCarrera de id #id    
 
 
 ## 🔧 Running the tests <a name = "tests"></a>
