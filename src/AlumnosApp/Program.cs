@@ -23,7 +23,7 @@ namespace FacultadAppSvc
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<AlumnoAppContext>();
+                    var context = services.GetRequiredService<FacultadAppContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

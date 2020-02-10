@@ -13,9 +13,9 @@ namespace FacultadAppSvc.Controllers
     [ApiController]
     public class MateriasCarrerasController : ControllerBase
     {
-        private readonly AlumnoAppContext _context;
+        private readonly FacultadAppContext _context;
 
-        public MateriasCarrerasController(AlumnoAppContext context)
+        public MateriasCarrerasController(FacultadAppContext context)
         {
             _context = context;
         }

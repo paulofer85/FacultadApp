@@ -15,9 +15,9 @@ namespace FacultadAppSvc.Controllers
     [ApiController]
     public class AlumnosController : ControllerBase
     {
-        private readonly AlumnoAppContext _context;
+        private readonly FacultadAppContext _context;
 
-        public AlumnosController(AlumnoAppContext context)
+        public AlumnosController(FacultadAppContext context)
         {
             _context = context;
         }
@@ -38,7 +38,7 @@ namespace FacultadAppSvc.Controllers
                 return BadRequest(ModelState);
             }
 
-            var alumnos = await _context.Alumnos.FindAsync(id);
+            var alumnos = await _context.Alumnos.SingleOrDefaultAsync(m => m.AlumnoId == id);
 
             if (alumnos == null)
             {

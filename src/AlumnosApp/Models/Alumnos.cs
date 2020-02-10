@@ -31,7 +31,7 @@ namespace FacultadAppSvc.Models
         
         [ForeignKey("Carrera")]
         [Column("CarreraFK")]
-        public int CarreraId { get; internal set; }
+        public int CarreraId { get; set; }
         public Carreras Carrera { get; set; }
         
         //public virtual ICollection<Inscripciones> Inscripciones { get; set; }

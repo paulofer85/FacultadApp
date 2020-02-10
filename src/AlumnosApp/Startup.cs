@@ -39,7 +39,7 @@ namespace FacultadAppSvc
                 });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<FacultadAppSvc.Models.AlumnoAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AlumnoAppContext")));
+            services.AddDbContext<FacultadAppSvc.Models.FacultadAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AlumnoAppContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

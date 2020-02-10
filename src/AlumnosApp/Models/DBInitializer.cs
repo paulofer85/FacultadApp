@@ -7,7 +7,7 @@ namespace FacultadAppSvc.Models
 {
     public static class DbInitializer
     {
-        public static void Initialize(AlumnoAppContext context)
+        public static void Initialize(FacultadAppContext context)
         {
             context.Database.EnsureCreated();
 

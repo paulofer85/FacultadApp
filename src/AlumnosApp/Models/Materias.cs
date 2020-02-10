@@ -21,6 +21,5 @@ namespace FacultadAppSvc.Models
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public short CargaHoraria { get; set; }
-        public List<Inscripciones> Inscripciones { get; set; }
     }
 }

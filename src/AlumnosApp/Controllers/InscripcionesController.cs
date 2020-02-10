@@ -13,9 +13,9 @@ namespace FacultadAppSvc.Controllers
     [ApiController]
     public class InscripcionesController : ControllerBase
     {
-        private readonly AlumnoAppContext _context;
+        private readonly FacultadAppContext _context;
 
-        public InscripcionesController(AlumnoAppContext context)
+        public InscripcionesController(FacultadAppContext context)
         {
             _context = context;
         }
